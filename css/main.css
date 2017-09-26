@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+body {
+  background-color: #f2f2f2;/*фон цвет */
+  font-family: "Lato";/*шрифт из гугл */
+  font-weight: 300;/* */
+  font-size: 16px;/* */
+  color: #555;/* */
+
+  -webkit-font-smoothing: antialiased;/* гладкий текст */
+  -webkit-overflow-scrolling: touch; /* скролл при помощи тача */
+
+  margin-top: 70px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
+}
+
+p{
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+/*класс текст в центре*/
+.centered{
+  text-align: center;
+}
+/*при наведении на ссылку*/
+a{
+
+  color: #f85c37;
+
+}
+/* при фокусировке и нажатии на ссылку*/
+a:hover, a:focus{
+  color: 'white';
+  text-decoration: none;
+  outline: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin:1em 0;
+  padding: 0;
+}
+.navbar{
+  font-weight: 800;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-inverse{
+  background: #0059b3;
+  border-color:#0059b3;
+}
+.navbar-inverse .navbar-nav > .active > a{
+  background-color: #004d99;
+}
+.navbar-inverse .navbar-brand {
+  color: #262626;
+  font-weight: bolder;
+  font-size: 22px;
+  letter-spacing: 1px;
+
+}
+
+#headerwrap{
+  background: url(../img/bg-kfu2.jpg) no-repeat center top;
+  margin-top: -10px;
+  padding-top: 20px;
+  /*text-align: center;*/
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 320px;
+  width: 100%;
+
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#headerwrap h1{
+  margin-top:100px;
+  color: black;
+  text-shadow: white 0 0 2px;
+  font-size: 70px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: right;
+}
+#headerwrap h2{
+  color: black;
+  text-shadow: white 0 0 2px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: right;
+}
+#headerwrap h3{
+  color: black;
+  text-shadow: white 0 0 2px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: right;
+  /*/text-transform: ;*/
+}
+#main {
+
+  padding-top: 20px;
+  /*text-align: center;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#footer {
+    /*position: fixed; /* Фиксированное положение */
+    /*left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 15px; /* Поля вокруг текста */
+    /*background: #39b54a; */
+    /* Цвет фона */
+    background: #435a6b;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+     /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+
+}
+#footer a{
+  color:inherit;
+}
+#footer a:hover, a:focus{
+  color:#bfbfbf;
+}
+#link1{
+  background: url(../img/bg-1.jpg) no-repeat center top;
+  margin-top: -20px;
+  padding-top: 20px;
+  /*text-align: center;*/
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 420px;
+  width: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#link1 a{
+  color :white;
+  text-shadow: black 0 0 4px;
+}
+#link1 a:hover,a:focus{
+  color: #f85c37;
+}
+#link2{
+  background: url(../img/bg-2.jpg) no-repeat center top;
+  margin-top: -20px;
+  padding-top: 20px;
+  /*text-align: center;*/
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 420px;
+  width: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#link2 a{
+  color :white;
+  text-shadow: black 0 0 4px;
+}
+#link2 a:hover,a:focus{
+  color: #f85c37;
+}
+/*эффект подчеркивания */
+.cl-effect-3 a {
+	padding: 8px 0;
+}
+.logo  {
+    /*display: block;*/
+    width: 50px;
+    height: 50px;
+}
+.cl-effect-3 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: rgba(0,0,0,0.1);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-3 a:hover::after,
+.cl-effect-3 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
