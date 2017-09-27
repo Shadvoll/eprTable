@@ -1,0 +1,10 @@
+.staff img {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 250px;
+}
+.block {
+  /*width: inherit;*/
+  height: 250px;
+}

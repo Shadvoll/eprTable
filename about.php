@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/about.css">
 	</head>
 	<body>
-
 		<div class="navbar navbar-inverse navbar-fixed-top ">
     <div class="container">
       <div class="navbar-header">
@@ -32,25 +32,37 @@
       </div>
     </div>
   </div>
-	<br><br>
-<h1>ТУТ НАДО БУДЕТ ВЫВЕСТИ СОТРУДНИКОВ из БД</h1>
-<?php
- // 	include "bin/session/base.php";
-	// include "bin/error/write_error.php";
+	<br>
+<div class="container-fluid">
+		<div class="row ">
 
-$user="root";
-$pass="root";
-$dbh = new PDO('mysql:host=localhost;dbname=eprTable', $user, $pass);
+			<?php
+			 	include "bin/session/base.php";
+				$row=$epr_base->query('SELECT * from staff');
+				$i=0;
+				while($info=$row->fetch()){
+					echo "<div class='col-sm-3 staff block'>\n";
+					if ($info['Photo']){
+							echo "<img src=".$info['Photo']." class='staff'>\n";
+							$i++;
+					}else{
+							echo "<img src='img/noimage.jpg'> \n";
+							$i++;
+					}
+					echo "</div>\n";
+					echo "<div class='col-sm-3 staff block'>\n";
+						echo $info['Name']."<br>\n";
+						echo $info['Degree']."<br>";
+						echo "<a href=".$info['url'].">Cсылка на профиль</a>";
+						$i++;
+					echo "</div>\n";
+				}
+			?>
+		</div>
+</div>
 
-	if( function_exists("mysql_query")){
-		echo "Exists";
-	}else {
-		echo "Doesnt Exist";
-	}
 
-?>
-
-
+<br>
   <div class="navbar-fixed-bottom row-fluid" id="footer">
     <div class="navbar-inner">
       <div class="container">

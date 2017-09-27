@@ -33,7 +33,24 @@
     </div>
   </div>
 	<br><br>
-<h1>ФОРМА СВЯЗИ</h1>
+<div class="container">
+  <h2>Форма обратной связи</h2>
+  <form action="bin/mail.php">
+		<div class="form-group">
+      <label for="name">Имя</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+		<div class="form-group">
+		  <label for="comment">Text:</label>
+		  <textarea class="form-control" rows="5" id="text" placeholder="Enter text here "name="text"></textarea>
+		</div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
 
 
   <div class="navbar-fixed-bottom row-fluid" id="footer">
